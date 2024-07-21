@@ -1,0 +1,68 @@
+/* Reset some default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto; /* Header, Main Content, Footer */
+    grid-template-columns: 1fr 3fr; /* Sidebar and Main Content */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Style the sidebar navigation */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    color: #666;
+}
